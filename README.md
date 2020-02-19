@@ -13,7 +13,7 @@ Magic-books Inc. is a fictional company based in Germany. They requested my help
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://maya-react-bookstore.herokuapp.com/)
 
 
 ## Getting Started
