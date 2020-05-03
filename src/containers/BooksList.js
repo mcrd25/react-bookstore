@@ -6,7 +6,6 @@ class BooksList extends React.Component {
     this.state = {
       books: [{ name: 'Title' }, { name: 'Title' }],
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
   render() {
@@ -15,7 +14,7 @@ class BooksList extends React.Component {
       <div>
         {
           books.map(book => (
-            <div key={book}>{book.name}</div>
+            <h1 key={book}>{book.name}</h1>
           ))
         }
       </div>
