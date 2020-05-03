@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
+import './index.css';
 
-ReactDOM.render(<h1>React bookstore</h1>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
