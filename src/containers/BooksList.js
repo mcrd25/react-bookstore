@@ -4,7 +4,15 @@ class BooksList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      books: [{ name: 'Title' }, { name: 'Title' }],
+      books: [{
+        id: 1,
+        title: 'Title1',
+        category: 'Biography',
+      }, {
+        id: 2,
+        title: 'Title1',
+        category: 'Adventure',
+      }],
     };
   }
 
@@ -13,8 +21,8 @@ class BooksList extends React.Component {
     return (
       <div>
         {
-          books.each(book => (
-            <h1>{book.name}</h1>
+          books.map(book => (
+            <h1 key={book.title}>{book.title}</h1>
           ))
         }
       </div>
