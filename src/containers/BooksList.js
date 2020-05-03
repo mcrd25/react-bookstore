@@ -13,8 +13,8 @@ class BooksList extends React.Component {
     return (
       <div>
         {
-          books.map(book => (
-            <h1 key={book}>{book.name}</h1>
+          books.each(book => (
+            <h1>{book.name}</h1>
           ))
         }
       </div>
