@@ -19,13 +19,26 @@ class BooksList extends React.Component {
   render() {
     const { books } = this.state;
     return (
-      <div>
-        {
-          books.map(book => (
-            <h1 key={book.title}>{book.title}</h1>
-          ))
-        }
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            books.map(book => (
+              <tr key={book.id}>
+                <td>{book.id}</td>
+                <td>{book.title}</td>
+                <td>{book.category}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
     );
   }
 }
