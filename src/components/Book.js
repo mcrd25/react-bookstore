@@ -1,11 +1,10 @@
 import React from 'react';
 
-class Book extends React.Component {
-  render() {
-    return (
-      'Book'
-    );
-  }
-}
+
+const Book = ({id, title, category})  => {
+  return (
+    'Book'
+  );
+};
 
 export default Book;
