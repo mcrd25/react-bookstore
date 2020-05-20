@@ -1,9 +1,13 @@
 import React from 'react';
 
 
-const Book = ({id, title, category})  => {
+const Book = ({id, title, category}) => {
   return (
-    'Book'
+    <tr>
+      <td>{id}</td>
+      <td>{title}</td>
+      <td>{category}</td>
+    </tr>
   );
 };
 
