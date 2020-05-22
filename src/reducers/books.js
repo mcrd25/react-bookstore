@@ -10,7 +10,7 @@ export default (state = [], action) => {
         },
       ];
     case actions.REMOVE_BOOK:
-      return state.filter(book => book.id !== action.payload.book.id)
+      return state.filter(book => book.id !== action.payload.book.id);
     default:
       return state;
   }
