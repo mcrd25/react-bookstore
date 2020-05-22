@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Book from '../components/Book';
 
-const BooksList = () => {
-  const { books } = this.props.books;
+const BooksList = ({ books }) => {
   return (
     <table>
       <thead>
@@ -21,8 +22,12 @@ const BooksList = () => {
       </tbody>
     </table>
   );
-}
+};
 
-const mapStatetoProps = (state) => ({ books: state.books })
+BooksList.propTypes = {
+  books: PropTypes.isRequired,
+};
 
-export default connect(mapStatetoProps)(BooksList);
+const mapStateToProps = state => ({ books: state.books });
+
+export default connect(mapStateToProps)(BooksList);

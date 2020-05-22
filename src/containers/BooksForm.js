@@ -12,7 +12,7 @@ const BooksForm = () => {
     'Sci-Fi',
   ];
   const options = categories.map(category => {
-    return <option key={category} value={category}>{category}</option>
+    return <option key={category} value={category}>{category}</option>;
   });
   return (
     <form>

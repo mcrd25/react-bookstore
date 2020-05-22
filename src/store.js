@@ -4,12 +4,12 @@ import rootReducer from './reducers';
 const initialState = {
   books: [
     {
-      id: Math.floor((Math.random())),
-      title: 'Lorem Ipsum',
+      id: Math.floor(Math.random() * 10),
+      title: 'Lorem Ipsum 1',
       category: 'Horror',
     },
     {
-      id: Math.floor((Math.random())),
+      id: Math.floor(Math.random() * 10),
       title: 'Lorem Ipsum 2',
       category: 'Action',
     },
