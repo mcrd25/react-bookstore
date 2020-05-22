@@ -11,9 +11,10 @@ const BooksForm = () => {
     'Learning',
     'Sci-Fi',
   ];
-  const options = categories.map(category => {
-    return <option key={category} value={category}>{category}</option>;
-  });
+  const options = categories.map(
+    category => <option key={category} value={category}>{category}</option>,
+  );
+
   return (
     <form>
       <input type="text" name="title" />
