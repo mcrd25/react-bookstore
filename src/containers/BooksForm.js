@@ -12,9 +12,16 @@ class BooksForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange(e) {
     this.setState({
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  handleSubmit(e) {
+    this.setState({
+      title: '',
+      category: 'Action',
     });
   }
 
