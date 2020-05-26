@@ -8,6 +8,14 @@ class BooksForm extends React.Component {
       title: '',
       category: 'Action',
     };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
   }
 
   render() {
@@ -25,8 +33,8 @@ class BooksForm extends React.Component {
     );
     return (
       <form>
-        <input type="text" name="title" />
-        <select name="category">{options}</select>
+        <input type="text" name="title" onChange={this.handleChange} />
+        <select name="category" onChange={this.handleChange}>{options}</select>
         <input type="submit" value="Add Book" />
       </form>
     );
