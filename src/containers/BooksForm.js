@@ -19,6 +19,7 @@ class BooksForm extends React.Component {
   }
 
   handleSubmit(e) {
+    e.preventDefault();
     this.setState({
       title: '',
       category: 'Action',
