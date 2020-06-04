@@ -1,4 +1,5 @@
 import React from 'react';
+import { createBook } from '../actions';
 
 
 class BooksForm extends React.Component {
@@ -56,5 +57,7 @@ class BooksForm extends React.Component {
     );
   }
 }
+
+const mapDispatchToProps = dispatch => ({ createBook: book => dispatch(createBook(book)) });
 
 export default BooksForm;
