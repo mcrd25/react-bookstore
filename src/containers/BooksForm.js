@@ -20,6 +20,14 @@ class BooksForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const { title, category } = this.state;
+
+    this.props.createBook({
+      id: Math.floor(Math.random() * 10),
+      title,
+      category,
+    });
+
     this.setState({
       title: '',
       category: 'Action',
