@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { removeBook } from '../actions';
 import Book from '../components/Book';
 
 const BooksList = ({ books }) => (
@@ -15,7 +16,7 @@ const BooksList = ({ books }) => (
     <tbody>
       {
         books.map(book => (
-          <Book key={book.id} book={book} />
+          <Book key={book.id} book={book} handleBookRemove={this.handleBookRemove}/>
         ))
       }
     </tbody>
@@ -28,5 +29,6 @@ BooksList.propTypes = {
 };
 
 const mapStateToProps = state => ({ books: state.books });
+const mapDispatchToProps = dispatch => ({ removeBook: book => dispatch(removeBook(book)) });
 
-export default connect(mapStateToProps)(BooksList);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
