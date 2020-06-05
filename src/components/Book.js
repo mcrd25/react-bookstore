@@ -16,7 +16,7 @@ const Book = ({ book, handleBookRemove }) => {
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.any).isRequired,
-  handleBookRemove: PropTypes.func,
+  handleBookRemove: PropTypes.func.isRequired,
 };
 
 export default Book;
