@@ -31,6 +31,7 @@ const BooksList = ({ books, removeBook}) => {
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({ books: state.books });
