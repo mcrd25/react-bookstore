@@ -41,7 +41,12 @@ BooksList.propTypes = {
   changeFilter: PropTypes.func.isRequired,
 };
 
-
+const filteredBooks = (books, filter) => {
+  if (filter === 'All') {
+    return books;
+  }
+  return books.filter(book => filter === book.category);
+};
 const mapStateToProps = state => ({ books: state.books, filter: state.filter });
 const mapDispatchToProps = dispatch => ({
   removeBook: book => dispatch(removeBook(book)),
