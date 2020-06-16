@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { removeBook, changeFilter } from '../actions';
 import Book from '../components/Book';
 
-const BooksList = ({ books, removeBook, changeFilter }) => {
+const BooksList = ({ books, removeBook, filter, changeFilter }) => {
   const handleBookRemove = book => {
     removeBook(book);
   };
