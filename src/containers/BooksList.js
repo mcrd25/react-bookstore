@@ -5,7 +5,12 @@ import { removeBook, changeFilter } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ books, removeBook, filter, changeFilter }) => {
+const BooksList = ({
+  books,
+  removeBook,
+  filter,
+  changeFilter,
+}) => {
   const handleBookRemove = book => {
     removeBook(book);
   };
