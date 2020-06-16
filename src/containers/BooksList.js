@@ -26,6 +26,7 @@ const BooksList = ({
   return (
     <div>
       <h5>Filter books:</h5>
+      <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
         <thead>
           <tr>
