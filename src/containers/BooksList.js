@@ -38,6 +38,7 @@ const BooksList = ({ books, removeBook, changeFilter }) => {
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
+  changeFilter: PropTypes.func.isRequired,
 };
 
 
