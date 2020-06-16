@@ -37,6 +37,9 @@ class BooksForm extends React.Component {
       title: '',
       category: 'Action',
     });
+
+    document.querySelector('input[name="title"]').value = '';
+    document.querySelector('select[name="category"]').value = 'Action';
   }
 
   render() {
