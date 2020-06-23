@@ -26,9 +26,15 @@ const BooksList = ({
   };
   return (
     <div>
-      <nav className="navbar navbar-light bg-white"><span className="navbar-brand my-2 title ml-5 pl-2">Bookstore CMS</span></nav>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table className="mt-5">
+      <nav className="navbar navbar-light bg-white">
+        <span className="navbar-brand my-2 title ml-5 pl-2">Bookstore CMS</span>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <CategoryFilter handleFilterChange={handleFilterChange} />
+          </li>
+        </ul>
+      </nav>
+      <table className="mt-5 ml-5 pl-5">
         {/* <thead>
           <tr>
             <th>ID</th>

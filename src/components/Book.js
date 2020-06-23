@@ -5,7 +5,7 @@ import './Book.css';
 const Book = ({ book, handleBookRemove }) => {
   const { id, title, category } = book;
   return (
-    <tr>
+    <tr className="book mb-2 bg-white">
       <td>{id}</td>
       <td>{title}</td>
       <td>{category}</td>
