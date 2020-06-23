@@ -26,16 +26,16 @@ const BooksList = ({
   };
   return (
     <div>
-      <h5>Filter books:</h5>
+      <nav>Nav</nav>
       <CategoryFilter handleFilterChange={handleFilterChange} />
       <table>
-        <thead>
+        {/* <thead>
           <tr>
             <th>ID</th>
             <th>Title</th>
             <th>Category</th>
           </tr>
-        </thead>
+        </thead> */}
         <tbody>
           {
             filteredBooks(books, filter).map(book => (
