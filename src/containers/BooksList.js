@@ -47,7 +47,6 @@ const BooksList = ({
   );
 };
 
-
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
