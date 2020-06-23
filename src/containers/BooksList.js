@@ -34,22 +34,25 @@ const BooksList = ({
           </li>
         </ul>
       </nav>
-      <table className="mt-5 ml-5 pl-5">
-        {/* <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead> */}
-        <tbody className="">
-          {
-            filteredBooks(books, filter).map(book => (
-              <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />
-            ))
-          }
-        </tbody>
-      </table>
+      <div className="container-fluid">
+        <table className="">
+          {/* <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Category</th>
+            </tr>
+          </thead> */}
+          <tbody className="">
+            {
+              filteredBooks(books, filter).map(book => (
+                <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />
+              ))
+            }
+          </tbody>
+        </table>
+        <hr className="my-5" />
+      </div> 
     </div>
   );
 };
