@@ -28,7 +28,7 @@ const BooksList = ({
     <div>
       <nav className="navbar navbar-light bg-white"><span className="navbar-brand my-2 title ml-5 pl-2">Bookstore CMS</span></nav>
       <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
+      <table className="mt-5">
         {/* <thead>
           <tr>
             <th>ID</th>
@@ -36,7 +36,7 @@ const BooksList = ({
             <th>Category</th>
           </tr>
         </thead> */}
-        <tbody>
+        <tbody className="">
           {
             filteredBooks(books, filter).map(book => (
               <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />
