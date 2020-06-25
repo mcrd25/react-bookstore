@@ -25,17 +25,17 @@ const BooksList = ({
     return books.filter(book => filter === book.category);
   };
   return (
-    <div>
-      <nav className="navbar navbar-light bg-white">
-        <span className="navbar-brand my-2 title ml-5 pl-2">Bookstore CMS</span>
+    <div className="w-100">
+      <nav className="navbar navbar-light bg-white nav-style">
+        <span className="navbar-brand my-2 title">Bookstore CMS</span>
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <CategoryFilter handleFilterChange={handleFilterChange} />
           </li>
         </ul>
       </nav>
-      <div className="container-fluid">
-        <table className="">
+      <div className="container-fluid body-cont">
+        <table className="mt-5 w-100">
           {/* <thead>
             <tr>
               <th>ID</th>
@@ -52,7 +52,7 @@ const BooksList = ({
           </tbody>
         </table>
         <hr className="my-5" />
-      </div> 
+      </div>
     </div>
   );
 };

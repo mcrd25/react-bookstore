@@ -56,14 +56,13 @@ class BooksForm extends React.Component {
       category => <option key={category} value={category}>{category}</option>,
     );
     return (
-      <div className="container-fluid">
+      <div className="container-fluid body-cont">
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="title" onChange={this.handleChange} />
           <select name="category" onChange={this.handleChange}>{options}</select>
           <input type="submit" value="Add Book" />
         </form>
       </div>
-      
     );
   }
 }
