@@ -36,14 +36,7 @@ const BooksList = ({
       </nav>
       <div className="container-fluid body-cont">
         <table className="mt-5 w-100">
-          {/* <thead>
-            <tr>
-              <th>ID</th>
-              <th>Title</th>
-              <th>Category</th>
-            </tr>
-          </thead> */}
-          <tbody className="">
+          <tbody>
             {
               filteredBooks(books, filter).map(book => (
                 <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />

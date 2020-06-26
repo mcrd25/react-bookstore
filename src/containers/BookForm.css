@@ -1,0 +1,14 @@
+.form-select {
+  width: 20%;
+}
+.form-btn {
+  width: 15%;
+}
+.form-input {
+  width: 60%;
+  height: 3rem;
+}
+.add-book {
+  font-size: 1.5rem;
+  font-weight: 900;
+}

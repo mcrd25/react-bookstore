@@ -1,3 +1,12 @@
 .book {
   width: 100%;
 }
+.book-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.book-category {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
