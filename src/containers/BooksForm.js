@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions';
-
+import './BookForm.css';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -56,11 +56,14 @@ class BooksForm extends React.Component {
       category => <option key={category} value={category}>{category}</option>,
     );
     return (
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" name="title" onChange={this.handleChange} />
-        <select name="category" onChange={this.handleChange}>{options}</select>
-        <input type="submit" value="Add Book" />
-      </form>
+      <div className="container-fluid body-cont">
+        <h3 className="text-secondary add-book">ADD NEW BOOK</h3>
+        <form className="w-100 d-flex justify-content-between" onSubmit={this.handleSubmit}>
+          <input className="form-input" type="text" name="title" placeholder="Book Title" onChange={this.handleChange} />
+          <select className="mx-3 form-select white" name="category" onChange={this.handleChange}>{options}</select>
+          <input className="btn btn-primary form-btn" type="submit" value="ADD BOOK" />
+        </form>
+      </div>
     );
   }
 }

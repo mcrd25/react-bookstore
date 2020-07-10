@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { removeBook, changeFilter } from '../actions';
 import Book from '../components/Book';
 import CategoryFilter from '../components/CategoryFilter';
+import './BookList.css';
 
 const BooksList = ({
   books,
@@ -24,29 +25,30 @@ const BooksList = ({
     return books.filter(book => filter === book.category);
   };
   return (
-    <div>
-      <h5>Filter books:</h5>
-      <CategoryFilter handleFilterChange={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            filteredBooks(books, filter).map(book => (
-              <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />
-            ))
-          }
-        </tbody>
-      </table>
+    <div className="w-100">
+      <nav className="navbar navbar-light bg-white nav-style">
+        <span className="navbar-brand my-2 title">Bookstore CMS</span>
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <CategoryFilter handleFilterChange={handleFilterChange} />
+          </li>
+        </ul>
+      </nav>
+      <div className="container-fluid body-cont">
+        <table className="mt-5 w-100">
+          <tbody>
+            {
+              filteredBooks(books, filter).map(book => (
+                <Book key={book.id} book={book} handleBookRemove={handleBookRemove} />
+              ))
+            }
+          </tbody>
+        </table>
+        <hr className="my-5" />
+      </div>
     </div>
   );
 };
-
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object).isRequired,
